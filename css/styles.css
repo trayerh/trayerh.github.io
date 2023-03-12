@@ -762,7 +762,7 @@ button.all#pressed{
     }
 
     #header .logo {
-        max-width: 60%;
+        max-width: 50%;
         float: none;
     }
 
@@ -778,6 +778,10 @@ button.all#pressed{
 }
 
 @media screen and (max-width: 420px) {
+    #header .nav-bar{
+        bottom: 0;
+    }
+    
     #header #blue {
         animation: 0;
     }
