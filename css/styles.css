@@ -829,6 +829,21 @@ button.all#pressed{
     }
 }
 
+/* Header mobile */
+@media (max-height:700px) and (max-width: 485px) {
+    #header .header-container {
+        top: 30%;
+    }
+
+    #header .logo {
+        max-width: 20%;
+    }
+
+    #header {
+        height: 95vh;
+    }
+}
+
 /* Experience---------------------------- */
 @media screen and (max-width:415px) {
     #experience .left{
