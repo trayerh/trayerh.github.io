@@ -141,7 +141,7 @@ $(document).on("mousemove touchmove", function (event) {
 
 // Continue button logic------- -------------------------------
 // Visibility
-$(window).scroll(function() {
+$(window).on("touchmove scroll", function(event) {
     var scrollPosition = $(window).scrollTop();
     dist_to_exp= $('#experience').offset().top
     if (scrollPosition > dist_to_exp) {
@@ -177,13 +177,14 @@ $("#continue-button").click(function(){
 
     if ($('#continue-button').css('--flip') == '180') {
         //go to top
+        setTimeout(function(){
+            $('#continue-button').css('opacity', '0 !important'), 5000;
+        });
         $(document).scrollTop(0);
-        $('#continue-button').css("--flip", 0);
     } else {
         //go down a section
         if (scroll_distance >= dist_to_cert) {
             $(document).scrollTop(dist_to_foot+1);
-            $('#continue-button').css("--flip", 180);
     
         } else if (scroll_distance >= dist_to_edu) {
             $(document).scrollTop(dist_to_cert+1);

@@ -38,6 +38,13 @@ body {
     padding-bottom: 20px;
 }
 
+/* If screen is bigger than 1920, use 100vw */
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 50vw;
+    }
+}
+
 .one-of-two {
     width: 50%;
     float: left;
@@ -71,6 +78,7 @@ body {
     transition: all 0.25s ease-in-out;
     opacity: 0;
 
+    --flip: 0;
     transform: rotate(calc(var(--flip)*1deg));
 
     animation: bobbing 2s ease-in-out infinite;
