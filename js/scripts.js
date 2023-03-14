@@ -144,12 +144,23 @@ $(document).on("mousemove touchmove", function (event) {
 $(window).on("touchmove scroll", function(event) {
     var scrollPosition = $(window).scrollTop();
     dist_to_exp= $('#experience').offset().top
-    if (scrollPosition > dist_to_exp) {
-      // If scroll is past header, make nav button visible
-      $('#continue-button').css('opacity', '1');
+
+    //if the page is not moving, check vis
+    if ($(window).scrollTop() == 0) {
+        $('#continue-button').css("--moving", 0);
+    }
+
+    if ($('#continue-button').css('--moving') == 0) {
+        if (scrollPosition > dist_to_exp) {
+            // If scroll is past header, make nav button visible
+            $('#continue-button').css('opacity', '1');
+            
+          } else {
+            // else hide it
+            $('#continue-button').css('opacity', '0');
+          }
     } else {
-      // else hide it
-      $('#continue-button').css('opacity', '0');
+        $('#continue-button').css('opacity', '0');
     }
 
     //--check if at bottom, if so flip icon 180 and make it link to top
@@ -177,10 +188,9 @@ $("#continue-button").click(function(){
 
     if ($('#continue-button').css('--flip') == '180') {
         //go to top
-        setTimeout(function(){
-            $('#continue-button').css('opacity', '0 !important'), 5000;
-        });
-        $(document).scrollTop(0);
+        $('#continue-button').css('opacity', '0');
+        $('#continue-button').css("--moving", 1);
+        $(document).scrollTop(0);        
     } else {
         //go down a section
         if (scroll_distance >= dist_to_cert) {

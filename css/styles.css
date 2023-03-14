@@ -79,6 +79,7 @@ body {
     opacity: 0;
 
     --flip: 0;
+    --moving: 0;
     transform: rotate(calc(var(--flip)*1deg));
 
     animation: bobbing 2s ease-in-out infinite;
