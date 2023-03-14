@@ -178,10 +178,12 @@ $("#continue-button").click(function(){
     if ($('#continue-button').css('--flip') == '180') {
         //go to top
         $(document).scrollTop(0);
+        $('#continue-button').css("--flip", 0);
     } else {
         //go down a section
         if (scroll_distance >= dist_to_cert) {
             $(document).scrollTop(dist_to_foot+1);
+            $('#continue-button').css("--flip", 180);
     
         } else if (scroll_distance >= dist_to_edu) {
             $(document).scrollTop(dist_to_cert+1);
