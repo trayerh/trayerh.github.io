@@ -758,36 +758,15 @@ button.all#pressed{
         font-size: 3rem;
     }
 
-    #header .header-container .one-of-two {
-        width: 100%;
-        float: none;
-        overflow: auto;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #header .logo {
-        max-width: 25%;
-        
-        float: none;
-    }
-
     #header .name{
         font-size: 3.5rem;
     }
 
-    #header .text-container {
-        transform: none;
-        position: unset;
-        text-align: center;
-    }
 }
 
-@media screen and (max-width: 485px) {
-    #header .nav-bar{
-        bottom: 0;
+@media screen and (max-width: 850px) {
+    #header .title {
+        margin-left: 0;
     }
     #header #blue {
         animation: 0;
@@ -812,25 +791,14 @@ button.all#pressed{
     }
 }
 
-@media (orientation: landscape) and (max-width: 650px) {
-    #header .logo {
-        max-width: 40%;
-        float:left;
-    }
-    .one-of-two{
-        float: right;
-        width: 50%;
-    }
-    #header .header-container{
-        top: 35%;
-    }
+@media (orientation: landscape) and (max-width: 660px) {
     #header h2.title{
         display:none;
     }
 }
 
 /* Header mobile */
-@media (max-height:700px) and (max-width: 485px) {
+@media (orientation: portrait) and (max-width: 485px) {
     #header .header-container {
         top: 30%;
     }
@@ -841,6 +809,51 @@ button.all#pressed{
 
     #header {
         height: 95vh;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 505px) {
+    .one-of-two {
+        width: 50%;
+        float: left;
+        /* margin: 0 10px; */
+    }
+}
+
+@media (orientation: landscape) and (max-height: 450px) {
+    #header .name {
+       font-size: 2.5rem;
+    }
+
+    #header .header-container {
+        top: 30%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 485px) {
+    .one-of-two {
+        float: none;
+        width: 100%;
+        overflow: auto;
+        height: max-content;
+    }
+
+    #header .header-container{
+        text-align: center;
+    }
+
+    #header .text-container{
+        position: unset;
+        transform: unset;
+    }
+
+    #header .logo {
+        float: none;
+        display: inline-block;
+    }
+
+    #header .title {
+        margin: 0 auto;
     }
 }
 
