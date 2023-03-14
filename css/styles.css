@@ -76,7 +76,15 @@ body {
     animation: bobbing 2s ease-in-out infinite;
 }
 
-#continue-button:hover {
+@media (hover: hover) {
+    #continue-button:hover {
+        border: 1px solid var(--light-color);
+        transition: background-color .5s;
+        background-color: var(--light-color);
+        color: black;
+    }
+}
+#continue-button:active {
     border: 1px solid var(--light-color);
     transition: background-color .5s;
     background-color: var(--light-color);
