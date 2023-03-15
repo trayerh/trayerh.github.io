@@ -148,6 +148,7 @@ $(window).on("touchmove scroll", function(event) {
     //if the page is not moving, check vis
     if ($(window).scrollTop() == 0) {
         $('#continue-button').css("--moving", 0);
+        $('#continue-button').css("--flip", 0);
     }
 
     if ($('#continue-button').css('--moving') == 0) {
@@ -164,13 +165,11 @@ $(window).on("touchmove scroll", function(event) {
     }
 
     //--check if at bottom, if so flip icon 180 and make it link to top
-
     var documentHeight = $(document).height();
     var viewportHeight = $(window).height();
     var scrollPosition = $(window).scrollTop();
     var distanceFromBottom = documentHeight - viewportHeight - scrollPosition;
     // Check if the user has reached the bottom of the page
-    // console.log(distanceFromBottom);
     if (distanceFromBottom <= 80) {
         // If they have, rotate the #continue-button element 180 degrees
         $('#continue-button').css("--flip", 180);
@@ -195,6 +194,7 @@ $("#continue-button").click(function(){
         //go down a section
         if (scroll_distance >= dist_to_cert) {
             $(document).scrollTop(dist_to_foot+1);
+            $('#continue-button').css("--flip", 180);
     
         } else if (scroll_distance >= dist_to_edu) {
             $(document).scrollTop(dist_to_cert+1);
