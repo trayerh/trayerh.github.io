@@ -169,8 +169,8 @@ $(window).on("touchmove scroll", function(event) {
     var viewportHeight = $(window).height();
     var scrollPosition = $(window).scrollTop();
     var distanceFromBottom = documentHeight - viewportHeight - scrollPosition;
-    // Check if the user has reached the bottom of the page
-    if (distanceFromBottom <= 80) {
+    // Check if the user has reached the bottom of the page (footer50px tall, padding 20px under)
+    if (distanceFromBottom <= 20) {
         // If they have, rotate the #continue-button element 180 degrees
         $('#continue-button').css("--flip", 180);
     } else {
