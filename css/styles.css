@@ -761,9 +761,8 @@ button.all#pressed{
 #content {
     background-color: var(--dark-color);
     border-radius: 2rem 2rem 0 0;
-    padding: 1% 1% 0 1%;
+    padding: 5% 15% 5% 15%;
     color: var(--light-color);
-    overflow: auto;
     position: relative;
     overflow: hidden;
 }
