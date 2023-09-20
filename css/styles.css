@@ -792,6 +792,38 @@ button.all#pressed{
     transform: translate(-50%, 0);
 }
 
+.blog-post {
+    padding: 5% 0;
+    border-bottom: 1px solid white;
+}
+
+.blog-post h2, .blog-post h3 {
+    font-weight: 400;
+}
+
+.blog-post-title, .blog-post-meta {
+    text-align: center;
+}
+
+.blog-post-title {
+    font-size: 2rem;
+    font-weight: 400
+}
+
+.blog-post p {
+    padding-left: 5%;
+}
+
+.blue-text {
+    color: var(--blue);
+}
+.red-text {
+    color: var(--red);
+}
+.yellow-text {
+    color: var(--yellow);
+}
+
 /* MEDIA QUERIES --------------------------------------------------------------------- */
 
 @media screen and (max-width: 600px) {
