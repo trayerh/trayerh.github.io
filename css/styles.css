@@ -10,6 +10,7 @@
 
     --red: #d8276b;
     --blue: #0096dc;
+    --purple: #6c5ea4;
     --yellow: #ff8700;
 }
 
@@ -812,6 +813,14 @@ button.all#pressed{
 
 .blog-post p {
     padding-left: 5%;
+}
+
+.blog-post a {
+    color: var(--purple);
+}
+
+.blog-post a:hover {
+    color: white;
 }
 
 .blue-text {
